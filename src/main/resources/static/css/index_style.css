@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+	background-color: deepskyblue
+}
+#centraldisplay{
+	background-color: antiquewhite;
+	text-align: center;
+	margin: 20px;
+	min-height: 800px;
+	min-width: 80%;
+}
+#headdisplay{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	background-color:antiquewhite;
+	margin: 20px;
+	min-width: 80%;
+	justify-content: center;
+}
+p {
+    color: #666666;
+    font-size: 1.2em;
+}
+.menu-buttons {
+	display:flex;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: deepskyblue;
+	width: 15%;
+	margin: 20px;
+	height: 80%;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/client-registration_style.css}" />
+</head>
+<body>
+	<div id="headdisplay">
+		<div class="menu-buttons">
+			<a th:href="@{/client-registration}">REGISTRAR NOVO CLIENTE</a>
+		</div>
+		<div class="menu-buttons">
+			<a th:href="@{/client-registration}">GERENCIAR CLIENTE</a>
+		</div>
+		<div class="menu-buttons">
+			<a th:href="@{/client-registration}">CRIAR ORDEM DE SERVIÇO</a>
+		</div>
+		<div class="menu-buttons">
+			<a th:href="@{/client-registration}">GERENCIAR ORDEM DE SERVIÇO</a>
+		</div>
+		<div class="menu-buttons">
+			<a th:href="@{/client-registration}">CONSULTAS</a>
+		</div>
+	</div>
+	<div id="centraldisplay">
+		<h2>REGISTRAR NOVO CLIENTE</h2>
+		<form method="POST">
+			<div class="labelform"><label>Primeiro Nome <input class="inputfield" name="primeironome" type="text" required/></label></div>
+			<div class="labelform"><label>Sobrenome <input 
+            class="inputfield" name="sobrenome" type="text" required/></label></div>
+			<div class="labelform"><label>CPF <input class="inputfield" name="cpf" type="number" required pattern="{11}"/></label></div>
+			<div class="labelform"><label>Telefone <input class="inputfield" name="telefone" type="number"/></label></div>
+			<input type="submit" value="Submit"/>	
+		</form>
+	</div>
+</body>
+</html>
