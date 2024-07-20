@@ -1,4 +1,4 @@
-package com.fellipe_silveira.car_workshop_manager.Repositories;
+package com.fellipe_silveira.car_workshop_manager.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -11,9 +11,4 @@ public class HomeController {
     public String home(Model model) {
         return "index";
     }
-
-    @GetMapping("/client-registration")
-    public String message(Model model) {
-        return "client-registration";
-    }
 }

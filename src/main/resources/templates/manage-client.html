@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/client-registration_style.css}" />
+</head>
+<body>
+	<div id="headdisplay">
+		<div class="menu-buttons">
+			<a th:href="@{./client-registration}">REGISTRAR NOVO CLIENTE</a>
+		</div>
+		<div class="menu-buttons">
+			<a th:href="@{./manage-client}">GERENCIAR CLIENTE</a>
+		</div>
+		<div class="menu-buttons">
+			<a th:href="@{/clients/list-all-clients}">LISTAR TODOS OS CLIENTES</a>
+		</div>
+	</div>
+	<div id="centraldisplay">
+		<h2>BUSCAR CLIENTE</h2>
+		<form method="POST">
+			<div class="labelform"><label>CPF 			<input class="inputfield" value="" name="cpf" type="text" required pattern="{11}"/></label></div>
+			<input type="submit" value="Submit"/>	
+		</form>
+	</div>
+</body>
+</html>

@@ -19,7 +19,7 @@ public class Client implements Serializable{
 	private String cpf;
 	private String firstName;
 	private String lastName;
-	private String PhoneNumber;
+	private String phoneNumber;
 	private List<Service> services = new ArrayList<>();
 	private List<Car> cars = new ArrayList<>();
 	
@@ -31,7 +31,7 @@ public class Client implements Serializable{
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.cpf = cpf;
-		PhoneNumber = phoneNumber;
+		this.phoneNumber = phoneNumber;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -52,10 +52,10 @@ public class Client implements Serializable{
 		this.cpf = cpf;
 	}
 	public String getPhoneNumber() {
-		return PhoneNumber;
+		return phoneNumber;
 	}
 	public void setPhoneNumber(String phoneNumber) {
-		PhoneNumber = phoneNumber;
+		this.phoneNumber = phoneNumber;
 	}
 	public List<Service> getServices() {
 		return services;
@@ -81,6 +81,6 @@ public class Client implements Serializable{
 	@Override
 	public String toString() {
 		return "Client [firstName=" + firstName + ", lastName=" + lastName + ", cpf=" + cpf + ", PhoneNumber="
-				+ PhoneNumber + "]";
+				+ phoneNumber + "]";
 	}
 }
