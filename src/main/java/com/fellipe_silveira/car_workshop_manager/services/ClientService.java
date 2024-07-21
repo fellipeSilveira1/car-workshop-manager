@@ -31,6 +31,7 @@ public class ClientService {
 	//procura um cliente pelo CPF
 	public Client findById(String cpf) {
 		Optional<Client> client = clientRepository.findById(cpf);
+		System.out.println("BUSCA POR CLIENTE: Cliente encontrado. CPF: " + client.get().getCpf() + " Nome: " + client.get().getFirstName());
 		return client.get();
 	}
 	

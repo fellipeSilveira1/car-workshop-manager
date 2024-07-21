@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/client-registration_style.css}" />
+	<meta charset="UTF-8">
+	<title>Gerenciador de Cliente</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/client-registration_style.css}" />
 </head>
+
 <body>
 	<div id="headdisplay">
 		<div class="menu-buttons">
-			<a th:href="@{./client-registration}">REGISTRAR NOVO CLIENTE</a>
+			<a th:href="@{../clients/client-registration}">REGISTRAR NOVO CLIENTE</a>
 		</div>
 		<div class="menu-buttons">
-			<a th:href="@{./manage-client}">GERENCIAR CLIENTE</a>
+			<a th:href="@{../clients/manage-client}">GERENCIAR CLIENTE</a>
 		</div>
 		<div class="menu-buttons">
-			<a th:href="@{/clients/list-all-clients}">LISTAR TODOS OS CLIENTES</a>
+			<a th:href="@{../clients/list-all-clients}">LISTAR TODOS OS CLIENTES</a>
 		</div>
 	</div>
 	<div id="centraldisplay">
 		<h2>BUSCAR CLIENTE</h2>
 		<form method="POST">
-			<div class="labelform"><label>CPF 			<input class="inputfield" value="" name="cpf" type="text" required pattern="{11}"/></label></div>
-			<input type="submit" value="Submit"/>	
+			<div class="labelform"><label>CPF <input class="inputfield" value="" name="cpf" type="text" required
+						pattern="{11}" /></label></div>
+			<input type="submit" value="BUSCAR" />
 		</form>
+		<div th:if="${cpfBuscado != null}">
+			<h2>Resultado da Busca</h2>
+			<div>
+				<label>CPF:</label>
+				<span th:text="${client != null ? client.cpf : 'Não encontrado'}"></span>
+			</div>
+			<div th:if="${client != null}">
+				<label>Nome:</label>
+				<span th:text="${client.firstName}">Nome</span>
+			</div>
+			<div th:if="${client != null}">
+				<label>Sobrenome:</label>
+				<span th:text="${client.lastName}">Sobrenome</span>
+			</div>
+			<div th:if="${client != null}">
+				<label>Número de telefone:</label>
+				<span th:text="${client.phoneNumber}">Número de telefone</span>
+			</div>
+		</div>
 	</div>
 </body>
+
 </html>
